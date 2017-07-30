@@ -13082,7 +13082,7 @@ yCHLzMzMzMyshhyyzMzMzMzMasghy8zMzMzMrIb+D+YYfwcPfKfdAAAAAElFTkSuQmCC
 <li><strong>waypoint</strong>: this is important because tells us the direction the cab should head to arrive to the desired destination so its crucial to include in the state space. Waypoint is necessary for efficiency, to make the learn the correct headings to arrive in less steps to the destintation.</li>
 <li><strong>left</strong>: including left onto the state space will increase safety as it will prevent accidents when there is a car on the left that intends to go forward at the same time the agent wants to turn right. </li>
 <li><strong>light</strong>: traffic light is relevant to safety as when the cab learns the correct behavior on its possible states it will avoid violations and accidents. </li>
-<li>oncoming: is important for reliability as the agent will avoid to moving forward if a car is across the intersection thus decreasing the changes of accidents. </li>
+<li><strong>oncoming</strong>: is important for reliability as the agent will avoid to moving forward if a car is across the intersection thus decreasing the changes of accidents. </li>
 </ul>
 <p>Not Chosen</p>
 <ul>
@@ -13122,7 +13122,7 @@ yCHLzMzMzMyshhyyzMzMzMzMasghy8zMzMzMrIb+D+YYfwcPfKfdAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The size of the state space is 4 for the waypoint (left, right, None, forward), 2 for light (True, False) and 4 for left (left, right, None, forward) so in total is (4 x 2 x 4) 32. The state space has a size that running Q learning long enough it will learn an optimal policy to get to its destinations.</p>
+<p>The size of the state space is 4 for the waypoint (left, right, None, forward), 2 for light (True, False), 4 for left and oncoming (left, right, None, forward) so in total is (4 x 2 x 4 x 4) 128. The state space has a size that running Q learning long enough it will learn an optimal policy to get to its destinations.</p>
 
 </div>
 </div>
